@@ -1,14 +1,15 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
 const Navbar = () => {
   const menus = [
-  { id: 1, name: "About Us " },
-  { id: 2, name: "Features" },
-  { id: 3, name: "Price" },
-  { id: 4, name: "FAQs" },
-  { id: 5, name: "Blogs" },
+  { id: 1, name: "About Us ", link:"/about" },
+  { id: 2, name: "Features" , link:"/features"},
+  { id: 3, name: "Price" ,link:"pricing"},
+  { id: 4, name: "FAQs", link:"/faqs" },
+  { id: 5, name: "Blogs", link:"/blogs" },
  
 ];
   return (
@@ -21,7 +22,9 @@ const Navbar = () => {
         <ul  className='flex gap-2'>
           {menus.map((menu)=>(
             <li key={menu.id} className=' '>
+              <Link href={menu.link}>
               <Button variant="ghost" className={"text-md text-[#004691] "}>{menu.name}</Button>
+              </Link>
             </li>
           ))}
         </ul>
