@@ -1,0 +1,55 @@
+export const PLANS = [
+  {
+    name: "Basic",
+    price: "15,000",
+    tagline: "Manage your shop inventory digitally with simplicity.",
+    features: [
+      "Product management",
+      "Category management",
+      "Basic stock tracking",
+      "Sales entry",
+      "Purchase entry",
+      "Low stock alert",
+      "Simple dashboard",
+      "Basic reports",
+      "Single user access",
+      "Web access",
+    ],
+  },
+  {
+    name: "Standard",
+    price: "20,000",
+    tagline:
+      "Smart billing with barcode, reports, and complete business control.",
+    features: [
+      "Multi-user access",
+      "Billing system",
+      "Barcode support",
+      "Advanced stock tracking",
+      "Customer management",
+      "Profit / loss tracking",
+      "Advanced reports",
+      "Stock movement history",
+      "GST / VAT-ready billing",
+    ],
+    highlighted: true,
+  },
+  {
+    name: "Premium",
+    price: "25,000",
+    tagline:
+      "Advanced analytics and automation for scaling and managing everything centrally.",
+    features: [
+      "Centralized dashboard",
+      "Advanced analytics",
+      "Smart alerts",
+      "Role-based access control",
+      "API integration",
+      "Mobile app access",
+      "Bulk import / export",
+      "Automated reports",
+      "Audit logs",
+      "Custom invoice design",
+    ],
+  },
+];
