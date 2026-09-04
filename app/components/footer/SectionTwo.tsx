@@ -1,6 +1,7 @@
 
 
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const SectionTwo = () => {
@@ -42,10 +43,10 @@ const SectionTwo = () => {
         </div>
         <hr className='lg:col-start-3 lg:row-start-2 border-black w-full lg:border-r' />
         <div className='lg:col-start-3 lg:row-start-3 lg:border-r border-gray-400 px-6 py-4 lg:px-0 flex justify-start lg:justify-center'>
-          <ul className='text-md font-serif text-[#003773]'>
-            <li>Privacy policy</li>
-            <li>Terms of service</li>
-            <li>Cookies policy</li>
+          <ul className='text-md font-serif  text-[#003773]'>
+            <li className='cursor-pointer py-1'> <Link href={"/policy"}> Privacy policy</Link></li>
+            <li className='cursor-pointer py-1'><Link href={"/tos"}> Term of Services</Link></li>
+            <li className='cursor-pointer py-1'><Link href={"/cookies"}> Cookies policy</Link></li>
           </ul>
         </div>
 

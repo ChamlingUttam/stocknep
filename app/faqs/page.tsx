@@ -1,12 +1,12 @@
 // import { redirect } from "next/navigation";
 
 // export default function page() {
-//   redirect("/#pricing");
+//   redirect("/#faqs");
 // }
 
 
 import React from 'react'
-import Faq from '../components/faqs/Faq'
+import Faq from './components/Faq'
 
 const page = () => {
   return (

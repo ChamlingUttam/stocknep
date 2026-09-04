@@ -1,3 +1,4 @@
+import Buttons from '@/app/home/components/header/Button';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image'
 import Link from 'next/link';
@@ -14,7 +15,7 @@ const Navbar = () => {
  
 ];
   return (
-    <div className='w-full border border-[#003773] px-10 py-6 flex justify-between items-center'>
+    <div className='w-full border border-[#003773] lg:px-10 lg:py-6 px-4 py-4 flex justify-between items-center'>
       <div>
         <Image src={"/Logo.png"} alt='logo' width={100} height={10}/>
       </div>
@@ -30,7 +31,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>       
-      <div className=''>
+      <div className='flex gap-2 items-center'>
         <div>
 
         <button className='bg-blue-500 border border-none  px-6 py-2 text-white lg:block hidden'>Get Started</button>
@@ -38,9 +39,22 @@ const Navbar = () => {
 
         <div>
 
+        <button className='bg-blue-500 border border-none  lg:px-6 lg:py-2 px-4  text-white lg:hidden block'>Menu</button>
         </div>
-        <button className='bg-blue-500 border border-none  px-6 py-2 text-white lg:hidden block'>Menu</button>
-        </div>       
+     {/* <div>
+  <button onClick={} className="rounded-md border border-[#0075BF] px-5 py-2 text-sm font-medium text-[#0075BF] transition-colors hover:bg-[#0075BF] hover:text-white">
+    Contact us
+  </button>
+</div> */}
+<Link
+      href="/contactus"
+      className="rounded-md border border-[#0075BF] lg:px-5 lg:py-2 px-4 py-1 text-center text-sm font-medium text-[#0075BF] transition-colors hover:bg-[#0075BF] hover:text-white inline-block"
+    >
+      Contact us
+    </Link>
+
+        
+        </div>    
 
       </div>
     </div>
