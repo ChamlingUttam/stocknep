@@ -5,8 +5,9 @@ import React from 'react'
 
 const Navbar = () => {
   const menus = [
-  { id: 1, name: "About Us ", link:"/about" },
-  { id: 2, name: "Features" , link:"/features"},
+  { id: 1, name: "Home ", link:"/home" },
+  { id: 2, name: "About Us ", link:"/about" },
+  // { id: 2, name: "Features" , link:"/features"},
   { id: 3, name: "Price" ,link:"pricing"},
   { id: 4, name: "FAQs", link:"/faqs" },
   { id: 5, name: "Blogs", link:"/blogs" },

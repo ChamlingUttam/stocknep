@@ -4,7 +4,7 @@ import Cards from './components/card/Card'
 import HeroTwo from './components/HeroTwo'
 import ProfileMain from './components/profileCard/ProfileMain'
 
-const HomePage = () => {
+const AboutPage = () => {
   return (
     <div>
       <Hero/>
@@ -15,4 +15,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default AboutPage
