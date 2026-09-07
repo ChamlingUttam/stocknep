@@ -1,10 +1,9 @@
 
-
-
-
+"use client"
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import {Calendar,User} from "lucide-react";
 
 import {
   Card,
@@ -14,8 +13,28 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useBlogs } from "@/hooks/blogs";
+import { useEffect } from "react";
 
-import { blogs } from "./api";
+export interface BlogCategory {
+  id: number;
+  name: string;
+}
+
+export interface Blog {
+  id: number;
+  category: BlogCategory;
+  title: string;
+  short_description: string;
+  long_description: string;
+  image: string;
+  Author: string | null;
+  is_published: boolean;
+  slug: string;
+  created_at: string;
+}
+
+
 
 
 export function CardImage() {
@@ -25,12 +44,19 @@ export function CardImage() {
   day: 'numeric',
   weekday: 'long'
 })
+
+const {data: blogsData,isLoading: isLoading} = useBlogs(); 
+
+useEffect(()=>{
+   console.log("BlogsData:",blogsData)
+},[blogsData])
+
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-        {blogs.map((blog) => {
-            const Icon2 = blog.icon2;
-          const Icon1 = blog.icon1;
+        {blogsData?.map((blog: Blog) => {
+            const Icon2 = User;
+          const Icon1 = Calendar;
 
           return (
             <Card
@@ -42,8 +68,8 @@ export function CardImage() {
 
               {/* Image */}
               <Image
-                src={blog.image}
-                alt={blog.heading}
+                src={`https://stocknep.product-api.hamroyouthit.com/api/v1${blog.image}/`}
+                alt={blog.title}
                 width={600}
                 height={400}
                 // fill
@@ -69,7 +95,7 @@ export function CardImage() {
                 {/* Heading */}
                 <CardTitle className="">
                     <h1 className=" pr-20 px-4 text-[#033773] font-medium font-Sans">
-                    {blog.heading}
+                    {blog.title}
                     </h1>
 
                     </CardTitle>
@@ -78,7 +104,7 @@ export function CardImage() {
                 <CardDescription >
                     <p className=" pr-20 px-4 text-[#007BFF]">
 
-                    {blog.text}
+                    {blog.short_description}
                     </p>
                     </CardDescription>
               </CardHeader>
