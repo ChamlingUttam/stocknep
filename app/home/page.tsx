@@ -1,8 +1,8 @@
 import React from 'react'
 import Section from './components/Section'
-import PricingTable from '../components/pricing/PricingTable'
 import Header from './components/header/Header'
 import Faq from '../faqs/components/Faq'
+import PricingTable from '@/components/pricing/PricingTable'
 
 const HomePage = () => {
   return (
