@@ -1,8 +1,10 @@
 import Buttons from '@/app/home/components/header/Button';
 import { Button } from '@/components/ui/button';
+// import { DropdownMenu } from '@/components/ui/dropdown-menu';
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
+import { DropdownMenuBasic } from './DropMenu';
 
 const Navbar = () => {
   const menus = [
@@ -37,9 +39,10 @@ const Navbar = () => {
         <button className='bg-blue-500 border border-none  px-6 py-2 text-white lg:block hidden'>Get Started</button>
         </div>
 
-        <div>
+        <div >
+          <DropdownMenuBasic />
 
-        <button className='bg-blue-500 border border-none  lg:px-6 lg:py-2 px-4  text-white lg:hidden block'>Menu</button>
+        {/* <button className='bg-blue-500 border border-none  lg:px-6 lg:py-2 px-4  text-white lg:hidden block'>Menu</button> */}
         </div>
      {/* <div>
   <button onClick={} className="rounded-md border border-[#0075BF] px-5 py-2 text-sm font-medium text-[#0075BF] transition-colors hover:bg-[#0075BF] hover:text-white">

@@ -5,8 +5,8 @@ export default function BlogHeader() {
         Insights to Help You Manage <br />
 Your Business Better
       </h1>
-      <p className=" font-medium tracking-wide mb-3 text-[#0057B5]">
-Explore practical tips, inventory management strategies, and business insights <br />
+      <p className=" ont-medium tracking-wide mb-3 text-[#0057B5]">
+Explore practical tips inventory management strategies, and business insights <br />
 to help you save time, reduce errors, and make smarter decisions with StockNep. 
       </p>
 
