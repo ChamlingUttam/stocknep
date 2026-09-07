@@ -1,6 +1,5 @@
-import React from 'react'
-import Header from './components/Header'
-import { Form } from './components/Form'
+import { Form } from '@/components/contactus/Form'
+import Header from '@/components/contactus/Header'
 
 const page = () => {
   return (
