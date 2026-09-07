@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import api from "@/api/api"
-import { API_ENDPOINTS } from "@/api/api-endpoints"
+import { useSendMessage } from "@/hooks/contact"
+
 
 export function Form() {
   const [firstName, setFirstName] = useState("")
@@ -22,6 +22,9 @@ export function Form() {
   const [phoneNumber, setPhoneNumber] = useState("")
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState("")
+  const [formMessage, setFormMessage] = useState("");
+
+  const {mutate: sendMessageMutation,isPending: isSending} = useSendMessage();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -30,19 +33,22 @@ export function Form() {
     setMessage("")
 
     try {
-      await api.post(API_ENDPOINTS.PUBLIC.CONTACT_US, {
+     
+      sendMessageMutation({
         first_name: firstName,
         last_name: lastName,
-        email,
+        email: email,
         phone_number: phoneNumber,
-      })
-
+        message: formMessage
+      }
+      )
       setMessage("Message sent successfully!")
 
       setFirstName("")
       setLastName("")
       setEmail("")
       setPhoneNumber("")
+      setFormMessage("");
     } catch (error: any) {
       console.error("Contact form error:", error)
 
@@ -149,6 +155,21 @@ export function Form() {
                   required
                 />
               </div>
+              <div className="grid gap-2">
+                <Label className="text-[#003773]" htmlFor="number">
+                  Message
+                </Label>
+
+                <Input
+                  className="text-[#0075BF] placeholder:text-[#0075BF]"
+                  id="string"
+                  type="tel"
+                  placeholder="Enter your message"
+                  value={formMessage}
+                  onChange={(e) => setFormMessage(e.target.value)}
+                  required
+                />
+              </div>
             </div>
 
             {message && (
@@ -160,10 +181,10 @@ export function Form() {
             <CardFooter className="flex-col gap-2 px-0 pt-6">
               <Button
                 type="submit"
-                disabled={loading}
+                disabled={isSending}
                 className="w-full bg-[#0075BF] text-white hover:bg-[#1187d1]"
               >
-                {loading ? "Sending..." : "Send Message"}
+                {isSending ? "Sending..." : "Send Message"}
               </Button>
             </CardFooter>
           </form>
