@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -24,13 +25,75 @@ export function Form() {
   const [message, setMessage] = useState("")
   const [formMessage, setFormMessage] = useState("");
 
+  // Validation errors
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    formMessage: "",
+  });
+
   const {mutate: sendMessageMutation,isPending: isSending} = useSendMessage();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    setLoading(true)
     setMessage("")
+
+    const newErrors = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      formMessage: "",
+    };
+
+    // First name validation
+    if (!firstName.trim()) {
+      newErrors.firstName = "First name is required.";
+    } else if (!/^[A-Za-z\s]+$/.test(firstName.trim())) {
+      newErrors.firstName = "First name can only contain letters.";
+    }
+
+    // Last name validation
+    if (!lastName.trim()) {
+      newErrors.lastName = "Last name is required.";
+    } else if (!/^[A-Za-z\s]+$/.test(lastName.trim())) {
+      newErrors.lastName = "Last name can only contain letters.";
+    }
+
+    // Email validation
+    if (!email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
+    ) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    // Phone validation
+    if (!phoneNumber.trim()) {
+      newErrors.phoneNumber = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(phoneNumber.trim())) {
+      newErrors.phoneNumber = "Phone number must contain exactly 10 digits.";
+    }
+
+    // Message validation
+    if (!formMessage.trim()) {
+      newErrors.formMessage = "Message is required.";
+    } else if (formMessage.trim().length < 10) {
+      newErrors.formMessage = "Message must be at least 10 characters.";
+    }
+
+    setErrors(newErrors);
+
+    // Stop form submission if there are validation errors
+    if (Object.values(newErrors).some((error) => error !== "")) {
+      return;
+    }
+
+    setLoading(true)
 
     try {
      
@@ -106,6 +169,12 @@ export function Form() {
                   onChange={(e) => setFirstName(e.target.value)}
                   required
                 />
+
+                {errors.firstName && (
+                  <p className="text-sm text-red-500">
+                    {errors.firstName}
+                  </p>
+                )}
               </div>
 
               <div className="grid gap-2">
@@ -122,6 +191,12 @@ export function Form() {
                   onChange={(e) => setLastName(e.target.value)}
                   required
                 />
+
+                {errors.lastName && (
+                  <p className="text-sm text-red-500">
+                    {errors.lastName}
+                  </p>
+                )}
               </div>
 
               <div className="grid gap-2">
@@ -138,6 +213,12 @@ export function Form() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
+
+                {errors.email && (
+                  <p className="text-sm text-red-500">
+                    {errors.email}
+                  </p>
+                )}
               </div>
 
               <div className="grid gap-2">
@@ -154,7 +235,14 @@ export function Form() {
                   onChange={(e) => setPhoneNumber(e.target.value)}
                   required
                 />
+
+                {errors.phoneNumber && (
+                  <p className="text-sm text-red-500">
+                    {errors.phoneNumber}
+                  </p>
+                )}
               </div>
+
               <div className="grid gap-2">
                 <Label className="text-[#003773]" htmlFor="number">
                   Message
@@ -169,6 +257,12 @@ export function Form() {
                   onChange={(e) => setFormMessage(e.target.value)}
                   required
                 />
+
+                {errors.formMessage && (
+                  <p className="text-sm text-red-500">
+                    {errors.formMessage}
+                  </p>
+                )}
               </div>
             </div>
 
@@ -193,4 +287,3 @@ export function Form() {
     </div>
   )
 }
-
