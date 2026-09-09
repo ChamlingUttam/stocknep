@@ -8,7 +8,7 @@ const Header = () => {
     Get In Touch With Us
       </h1>
       <p className=" font-sm lg:font-medium tracking-wide mb-3 text-[#0057B5]">
-     Reach out for inquiries, support, or feedback. Fill out the form, and we'll get back to you promptly.
+     Reach out for inquiries, support, or feedback. Fill out the form, and we will get back to you promptly.
       </p>
 
         </header>
@@ -16,4 +16,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
