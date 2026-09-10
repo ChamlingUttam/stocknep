@@ -28,7 +28,7 @@ const TrustCard = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 mt-8 gap-3  sm:grid-cols-2 lg:grid-cols-4 gap-x-4 px-4">
+    <div className="grid grid-cols-1 mt-8 gap-3  sm:grid-cols-2 lg:grid-cols-4 gap-x-4 px-30">
       {apis.map((api) => (
        <Card className="relative mx-auto w-full max-w-sm pt-0" key={api.id}>
      

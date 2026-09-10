@@ -41,7 +41,7 @@ const chartConfig = {
 
 export function CardOne() {
   return (
-    <Card className="m-4 lg:m-2">
+    <Card className="m-4 lg:m-2 ">
       {/* <CardHeader>
         <CardTitle>Bar Chart</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
@@ -53,7 +53,7 @@ export function CardOne() {
             <XAxis
               dataKey="month"
               tickLine={false}
-              tickMargin={10}
+              tickMargin={4}
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
             />
@@ -61,11 +61,11 @@ export function CardOne() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8} />
+            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={2}  barSize={26}/>
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col items-start  bg-white gap-2 text-sm">
           <span><Database className="text-[#0075BF]"/></span>
         <div className="flex gap-2 leading-none font-medium">
         <h1 className="text-[#003773] text-xl ">Stock Market</h1>

@@ -50,7 +50,7 @@ const HeroTwo = () => {
         </header>
 
         <div>
-            <div  className='grid grid-cols-1 lg:grid-cols-3 grid-row-2 p-4 lg:grid-row-1 gap-2 ' >
+            <div  className='grid grid-cols-1 lg:grid-cols-3 grid-row-2 p-4 lg:grid-row-1 lg:px-30 gap-2 ' >
             {apis.map((api)=>(
                     <Card key={api.id} className='flex items-center gap-2 p-5'>
                         <span><api.icon size={20} className='text-[#0057B5]'></api.icon></span>

@@ -35,7 +35,7 @@ const Cards = () => {
 ]
   return (
     // <div className='flex flex-col'>
-        <div className='border-b border-gray-400 w-full'>
+        <div className='border-b border-gray-400 w-full lg:px-27'>
 
       <CardHeader/>
      <div className="flex flex-col lg:flex-row gap-4  lg:p-4 p-2">

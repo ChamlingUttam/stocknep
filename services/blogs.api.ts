@@ -6,7 +6,8 @@ export const getAllBlogs= async ()=> {
    return res.data.data.data;
 }
 
-export const getBlogById = async ()=>{
-    const res = await api.get(`${API_ENDPOINTS.PUBLIC.BLOGID}`)
-    return res.data.data.data
+export const getBlogById = async (id:string | number)=>{
+    const res = await api.get(`${API_ENDPOINTS.PUBLIC.BLOG_ID(id)}`)
+     console.log("Single blog API response:", res.data)
+    return res.data.data
 }

@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "stocknep.product-api.hamroyouthit.com",
-        pathname: "/api/v1/**",
+        pathname: "/**",
       },
     ],
   },

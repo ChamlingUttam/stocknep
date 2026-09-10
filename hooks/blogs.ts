@@ -13,6 +13,6 @@ export const useBlogs = ()=> {
 export const useBlogId = (id:idType)=>{
     return useQuery({
         queryKey:["blog",id],
-        queryFn:getBlogById,
+        queryFn:()=>getBlogById(id),
     })
 }

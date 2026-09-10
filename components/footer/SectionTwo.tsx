@@ -7,15 +7,15 @@ import React from 'react'
 const SectionTwo = () => {
   return (
     <>
-      <div className='grid grid-cols-1 lg:grid-cols-[6fr_1.5fr_2fr_2.5fr] lg:grid-rows-[auto_auto_1fr] w-full border border-gray-400'>
+     <div className='grid grid-cols-1 lg:px-25 lg:grid-cols-[6fr_1.5fr_2fr_2.5fr] lg:grid-rows-[auto_auto_1fr] w-full border border-gray-400'>
 
         {/* Logo / About column */}
-        <div className='lg:col-start-1 lg:row-start-1 border lg:border-b-0 lg:border-r border-gray-400 px-6 pt-6 pb-4 lg:px-10 lg:py-6 flex items-center'>
+        <div className='lg:col-start-1 lg:row-start-1   border-gray-400 px-6 pt-6 pb-4 lg:px-10 lg:py-6 flex items-center justify-center lg:justify-start'>
           <Image src={"/Logo.png"} alt="logo" width={100} height={10} />
         </div>
-        <hr className='lg:col-start-1 lg:row-start-2 border-black w-full lg:border-r' />
-        <div className='lg:col-start-1 lg:row-start-3 lg:border-r border-gray-400 px-6 py-5 lg:p-5 text-[#003773]'>
-          <p>
+        {/* <hr className='lg:col-start-1 lg:row-start-2 border-black w-full lg:border-r' /> */}
+        <div className='lg:col-start-1 lg:row-start-3  border-gray-400 px-6 py-5 lg:p-5 text-[#003773] text-center lg:text-left'>
+          <p className='px-4'>
             StockNep is a smart inventory management SaaS designed <br />
             for businesses in Nepal. Track stock, manage sales, generate <br />
             invoices, and grow faster with confidence.
@@ -23,12 +23,12 @@ const SectionTwo = () => {
         </div>
 
         {/* Company column */}
-        <div className='lg:col-start-2 lg:row-start-1 border lg:border-b-0 lg:border-r border-gray-400 px-6 pt-7 pb-4 lg:px-10 lg:py-7.5 flex items-center lg:justify-center text-[#003773]'>
+        <div className='lg:col-start-2 lg:row-start-1 font-bold text-xl   px-6 pt-7 pb-4 lg:px-10 lg:py-7.5 flex items-center justify-center text-[#003773]'>
           Company
         </div>
-        <hr className='lg:col-start-2 lg:row-start-2 border-black w-full lg:border-r' />
-        <div className='lg:col-start-2 lg:row-start-3 lg:border-r border-gray-400 px-6 py-4 lg:px-0 flex justify-start lg:justify-center'>
-          <ul className='text-md font-serif text-[#003773]'>
+        {/* <hr className='lg:col-start-2 lg:row-start-2 border-black w-full lg:border-r' /> */}
+        <div className='lg:col-start-2 lg:row-start-3 px-6 py-4 lg:px-0 flex justify-center'>
+          <ul className='text-md font-serif  text-[#003773] text-center'>
             <li>About Us</li>
             <li>Features</li>
             <li>Pricing</li>
@@ -38,12 +38,12 @@ const SectionTwo = () => {
         </div>
 
         {/* Legal column */}
-        <div className='lg:col-start-3 lg:row-start-1 border lg:border-b-0 lg:border-r border-gray-400 px-6 pt-7 pb-4 lg:px-10 lg:py-7.5 flex items-center lg:justify-center text-[#003773]'>
+        <div className='lg:col-start-3 lg:row-start-1 font-bold text-xl px-6 pt-7 pb-4 lg:px-10 lg:py-7.5 flex items-center justify-center text-[#003773]'>
           Legal
         </div>
-        <hr className='lg:col-start-3 lg:row-start-2 border-black w-full lg:border-r' />
-        <div className='lg:col-start-3 lg:row-start-3 lg:border-r border-gray-400 px-6 py-4 lg:px-0 flex justify-start lg:justify-center'>
-          <ul className='text-md font-serif  text-[#003773]'>
+        {/* <hr className='lg:col-start-3 lg:row-start-2 border-black w-full lg:border-r' /> */}
+        <div className='lg:col-start-3 lg:row-start-3  px-6 py-4 lg:px-0 flex justify-center'>
+          <ul className='text-md font-serif text-[#003773] text-center'>
             <li className='cursor-pointer py-1'> <Link href={"/policy"}> Privacy policy</Link></li>
             <li className='cursor-pointer py-1'><Link href={"/tos"}> Term of Services</Link></li>
             <li className='cursor-pointer py-1'><Link href={"/cookies"}> Cookies policy</Link></li>
@@ -51,12 +51,12 @@ const SectionTwo = () => {
         </div>
 
         {/* Contact column */}
-        <div className='lg:col-start-4 lg:row-start-1 border-b lg:border-b-0 border-gray-400 px-6 pt-7 pb-4 lg:px-10 lg:py-7.5 flex items-center lg:justify-center text-[#003773]'>
+        <div className='lg:col-start-4 lg:row-start-1 font-bold text-xl px-6 pt-7 pb-4 lg:px-10 lg:py-7.5 flex items-center justify-center text-[#003773]'>
           Contact
         </div>
-        <hr className='lg:col-start-4 lg:row-start-2 border-black w-full' />
-        <div className='lg:col-start-4 lg:row-start-3 px-6 py-4 lg:px-10 flex justify-start lg:justify-center'>
-          <ul className='text-md font-serif text-[#003773]'>
+        {/* <hr className='lg:col-start-4 lg:row-start-2 border-black w-full' /> */}
+        <div className='lg:col-start-4 lg:row-start-3 px-6 py-4 lg:px-10 flex items-center justify-center'>
+          <ul className='text-md font-serif text-[#003773] text-center'>
             <li>9746888890</li>
             <li>hamroyouthit@gmail.com</li>
             <li>Pragati Chowk, Itahari, Nepal</li>
@@ -75,3 +75,6 @@ const SectionTwo = () => {
 }
 
 export default SectionTwo
+
+
+
