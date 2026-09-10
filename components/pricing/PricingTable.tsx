@@ -95,7 +95,7 @@ export default function PricingTable() {
         )}
 
         {!loading && !error && (
-          <div className="flex flex-col lg:flex-row gap-6 items-stretch">
+          <div className="flex flex-col lg:flex-row gap-6 lg:px-9.5 items-stretch">
             {plans.map((plan) => (
               <PricingCard
                 key={plan.name}

@@ -206,14 +206,25 @@ export function CardImage() {
     )
   }
 
+  const truncateWords = (text: string, wordLimit: number) => {
+  const words = text.split(" ");
+
+  return words.length > wordLimit
+    ? `${words.slice(0, wordLimit).join(" ")}...`
+    : text;
+};
+
+
+
   return (
     <div className="px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 lg:px-22 lg:grid-cols-3">
         {blogsData.map((blog: Blog) => {
           const Icon2 = User
           const Icon1 = Calendar
 
-          return (
+          return (                      
+
             <Card
               key={blog.id}
               className="relative mx-auto w-full max-w-sm overflow-hidden pt-0"
@@ -237,7 +248,7 @@ export function CardImage() {
 
               <CardHeader className="flex flex-col gap-4">
                 {/* Icons */}
-                <CardAction className="my-4 flex w-full items-center justify-around">
+                <CardAction className="my-4 flex w-full items-center lg:justify-around ">
                   <div className="flex items-center justify-center gap-2">
                     <span className="h-5 w-5 border text-center text-[#007BFF]">
                       <Icon2 size={20} />
@@ -254,21 +265,21 @@ export function CardImage() {
                     </span>
 
                     <span className="text-[#007BFF]">
-                      {blog.created_at}
+                      {new Date(blog.created_at).toLocaleDateString()} 
                     </span>
                   </div>
                 </CardAction>
 
                 {/* Heading */}
-                <CardTitle>
-                  <h1 className="px-4 pr-20 font-Sans font-medium text-[#033773]">
-                    {blog.title}
+                <CardTitle className="w-full flex items-center justify-center">
+                  <h1 className="  text-center font-Sans font-medium text-[#033773]">
+                    {truncateWords(blog.title, 6)}
                   </h1>
                 </CardTitle>
 
                 {/* Description */}
-                <CardDescription>
-                  <p className="px-4 pr-20 text-[#007BFF]">
+                <CardDescription className=" w-full flex items-center justify-center">
+                  <p className="text-center line-clamp-3  text-[#007BFF]">
                     {blog.short_description}
                   </p>
                 </CardDescription>

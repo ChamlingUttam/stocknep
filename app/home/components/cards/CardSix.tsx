@@ -44,7 +44,7 @@ export function CardSix() {
         <CardTitle>Bar Chart</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader> */}
-      <CardContent className="flex flex-col items-center pt-4">
+      <CardContent className="flex flex-col items-center pt-4 mb-9.5">
         {/* <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
@@ -64,7 +64,7 @@ export function CardSix() {
         </ChartContainer> */}
       <Image src={"/card6.png"} alt="card56" className="w-64  h-auto"  width={100} height={50} />
       </CardContent>
-     <CardFooter className="flex-col items-start gap-2 text-sm">
+     <CardFooter className="flex-col bg-white items-start gap-2 text-sm">
         <span><User className="text-[#0075BF] w-10 h-8"/></span>
          <div className="flex gap-2 leading-none font-medium">
           <h1 className="text-[#003773] text-xl ">Team Management</h1>

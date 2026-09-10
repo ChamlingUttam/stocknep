@@ -8,7 +8,7 @@ import { Building2 } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div className=" border-b border-gray-400 w-full flex flex-col lg:flex-row justify-between items-center gap-10 px-6 lg:px-10 py-10">
+    <div className=" border-b border-gray-400 w-full flex flex-col lg:px-30 lg:flex-row justify-between items-center gap-10 px-6  py-10">
       {/* Left side */}
       <div className="flex flex-col gap-4 w-full lg:w-1/2">
         <div className="flex gap-2">

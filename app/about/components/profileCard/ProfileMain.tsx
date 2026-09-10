@@ -4,7 +4,7 @@ import { ProfileCard } from './ProfileCard'
 
 const ProfileMain = () => {
   return (
-    <div>
+    <div className=''>
       <ProfileHeader/>
       <ProfileCard/>
     </div>

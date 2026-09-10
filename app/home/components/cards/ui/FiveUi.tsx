@@ -2,7 +2,7 @@ import { Menu, Settings, ShoppingBag } from "lucide-react"
 
 export function FiveUi() {
   return (
-    <div className="flex flex-col gap-4 rounded-xl border p-4">
+    <div className="flex flex-col gap-3 p-3">
       {/* Row 1: nav bar */}
       <div className="flex items-center justify-between">
         {/* Left side */}
@@ -21,7 +21,7 @@ export function FiveUi() {
       </div>
 
       {/* Row 2: stat cards */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3">
         <div className="flex flex-1 items-center gap-3 rounded-lg border p-3">
           <ShoppingBag className="h-6 w-6 text-[#0075BF]" />
           <div className="flex flex-col">

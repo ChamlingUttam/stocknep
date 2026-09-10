@@ -8,7 +8,7 @@ import { CardSix } from './CardSix'
 
 const MainCard = () => {
   return (
-    <div className='lg:grid-cols-3 lg:grid-rows-2 grid grid-cols-1 gap-4 mt-4'>
+    <div className='lg:grid-cols-3 lg:grid-rows-2 grid grid-cols-1 gap-4  lg:px-27 p-10'>
         <CardOne/>
         <CardTwo/>
         <CardThree/>

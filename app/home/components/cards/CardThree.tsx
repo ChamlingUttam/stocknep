@@ -64,7 +64,7 @@ export function CardThree() {
         </ChartContainer>
       </CardContent> */}
       <ThreeUi/>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      <CardFooter className="flex-col items-start gap-2 text-sm bg-white">
         <span><ShoppingBasket className="text-[#0075BF] w-10 h-7"/></span>
          <div className="flex gap-2 leading-none font-medium">
           <h1 className="text-[#003773] text-xl ">Purchases Order</h1>

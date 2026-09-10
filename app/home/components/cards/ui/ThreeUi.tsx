@@ -3,13 +3,13 @@ import React from "react";
 
 const ThreeUi = () => {
   return (
-    <div className=" p-4">
-      <div className="space-y-2 rounded-lg border border-gray-100 bg-gray-50  dark:border-gray-700 dark:bg-gray-800">
+    <div className=" p-2">
+      <div className="space-y-3">
         
-        <div className=" text-center space-y-2 ">
+        <div className=" text-center space-y-2 px-5 ">
 
             
-         <h2 className="text-xl text-[#0075BF]  p-4 border-b border-gray-400 mb-5">RECIPT</h2>
+         <h2 className="text-xl text-[#0075BF] border-b border-gray-400 mb-7 ">RECIPT</h2>
             
           
           <dl className="flex items-center justify-between gap-4 text-[#0075BF]">
@@ -54,7 +54,7 @@ const ThreeUi = () => {
 
         </div>
 
-        <dl className="flex items-center justify-between gap-4 text-[#0057FB] border-t border-gray-200 pt-2 dark:border-gray-700">
+        <dl className="flex items-center justify-between gap-4 px-5 text-[#0057FB] border-t border-gray-200 pt-2 dark:border-gray-700">
           <dt className="text-base font-bold ">
             Total Amount
           </dt>

@@ -64,7 +64,7 @@ export function CardFour() {
         </ChartContainer> */}
         <FourUi/>
       </CardContent>
-     <CardFooter className="flex-col items-start gap-2 text-sm">
+     <CardFooter className="flex-col items-start gap-2 bg-white text-sm">
         <span><Shield className="text-[#0075BF] w-10 h-8"/></span>
          <div className="flex gap-2 leading-none font-medium">
           <h1 className="text-[#003773] text-xl ">Data Security</h1>

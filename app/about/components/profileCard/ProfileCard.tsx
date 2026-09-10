@@ -49,7 +49,7 @@ import { apis } from "./apis"
 
 export function ProfileCard() {
   return (
-    <div className="flex flex-col lg:flex-row gap-4 border-b border-gray-400 w-full p-4">
+    <div className="flex flex-col lg:flex-row gap-4 border-b border-gray-400 w-full lg:px-32 p-4">
       {apis.map((api) => (
         <Card key={api.id} className="relative mx-auto w-full max-w-sm pt-0 overflow-hidden">
           <div className="relative aspect-video">
