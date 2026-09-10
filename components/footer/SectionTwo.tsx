@@ -10,11 +10,11 @@ const SectionTwo = () => {
      <div className='grid grid-cols-1 lg:px-25 lg:grid-cols-[6fr_1.5fr_2fr_2.5fr] lg:grid-rows-[auto_auto_1fr] w-full border border-gray-400'>
 
         {/* Logo / About column */}
-        <div className='lg:col-start-1 lg:row-start-1   border-gray-400 px-6 pt-6 pb-4 lg:px-10 lg:py-6 flex items-center justify-center lg:justify-start'>
+        <div className='lg:col-start-1 lg:row-start-1    px-6 pt-6 pb-4 lg:px-10 lg:py-4 flex items-center justify-center lg:justify-start'>
           <Image src={"/Logo.png"} alt="logo" width={100} height={10} />
         </div>
         {/* <hr className='lg:col-start-1 lg:row-start-2 border-black w-full lg:border-r' /> */}
-        <div className='lg:col-start-1 lg:row-start-3  border-gray-400 px-6 py-5 lg:p-5 text-[#003773] text-center lg:text-left'>
+        <div className='lg:col-start-1 lg:row-start-3   px-6 py-5 lg:p-5 text-[#003773] text-center lg:text-left'>
           <p className='px-4'>
             StockNep is a smart inventory management SaaS designed <br />
             for businesses in Nepal. Track stock, manage sales, generate <br />
@@ -27,9 +27,9 @@ const SectionTwo = () => {
           Company
         </div>
         {/* <hr className='lg:col-start-2 lg:row-start-2 border-black w-full lg:border-r' /> */}
-        <div className='lg:col-start-2 lg:row-start-3 px-6 py-4 lg:px-0 flex justify-center'>
-          <ul className='text-md font-serif  text-[#003773] text-center'>
-            <li>About Us</li>
+        <div className='lg:col-start-2 lg:row-start-3 px-6  lg:px-0 flex justify-center'>
+          <ul className='text-md font-serif   text-[#003773] text-center'>
+            <li className=''>About Us</li>
             <li>Features</li>
             <li>Pricing</li>
             <li>Testomonial</li>
