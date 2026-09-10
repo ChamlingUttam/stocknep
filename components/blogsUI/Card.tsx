@@ -13,9 +13,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {  useBlogs } from "@/hooks/blogs";
+import { useBlogs } from "@/hooks/blogs";
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 export interface BlogCategory {
   id: number;
@@ -47,14 +46,6 @@ export function CardImage() {
 })
 
 const {data: blogsData,isLoading: isLoading} = useBlogs(); 
-// const {data:blogsDataById} = useBlogId()
-
-const router = useRouter()
-
-const handleReadMore = (id:string|number)=>{
-  router.push(`/blog/${id}`)
-  
-}
 
 useEffect(()=>{
    console.log("BlogsData:",blogsData)
@@ -120,7 +111,7 @@ useEffect(()=>{
 
               {/* Same footer for all cards */}
               <CardFooter>
-                <Button onClick={()=>handleReadMore(blog.id)} className="bg-[#007BFF] p-4 text-white">
+                <Button className="bg-[#007BFF] p-4 text-white">
                   Read more
                 </Button>
               </CardFooter>
