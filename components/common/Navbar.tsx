@@ -11,13 +11,13 @@ const Navbar = () => {
   { id: 1, name: "Home ", link:"/home" },
   { id: 2, name: "About Us ", link:"/about" },
   // { id: 2, name: "Features" , link:"/features"},
-  { id: 3, name: "Price" ,link:"pricing"},
+  { id: 3, name: "Price" ,link:"/pricing"},
   { id: 4, name: "FAQs", link:"/faqs" },
   { id: 5, name: "Blogs", link:"/blogs" },
  
 ];
   return (
-    <div className='w-full border border-[#003773] lg:px-30 lg:py-4 px-4 py-4 flex justify-between items-center'>
+    <div className='w-full border  border-[#003773] lg:px-30 lg:py-4 px-4 py-4 flex justify-between items-center'>
       <div>
         <Image src={"/Logo.png"} alt='logo' width={100} height={10}/>
       </div>

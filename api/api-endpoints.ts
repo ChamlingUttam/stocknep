@@ -8,6 +8,7 @@ export const API_ENDPOINTS = {
         CONTACT_US: `/public/contact_us`, 
         PRICING: `/public/pricing`,
         FAQ: `/public/faq`,
+        TESTIMONIAL:`/public/testimonial`,
 
     BLOG_ID: (id: idType) => `/public/blog/${id}`
     }
